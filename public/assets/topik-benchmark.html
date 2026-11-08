@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TOPIK Bench</title>
+  <style>
+    @font-face{font-family:Talk Sans;src:url('./dm-sans-400.ttf');font-weight:400}
+    @font-face{font-family:Talk Sans;src:url('./dm-sans-500.ttf');font-weight:500}
+    *{box-sizing:border-box}
+    body{margin:0;background:#121612;color:#f0f1e9;font-family:Talk Sans,Arial,sans-serif}
+    main{width:1600px;height:900px;padding:64px;overflow:hidden}
+    header{display:flex;gap:40px;align-items:center}
+    header img{width:224px;height:auto;display:block}
+    h1{margin:0;font-size:56px;line-height:1.1;font-weight:500;letter-spacing:-2px}
+    header p{margin:14px 0 0;font-size:26px;color:#9da795}
+    table{border-collapse:collapse;width:1120px;table-layout:fixed;margin-top:66px;font-variant-numeric:tabular-nums}
+    col:nth-child(1){width:330px}col:nth-child(2){width:165px}col:nth-child(3){width:180px}col:nth-child(4){width:205px}col:nth-child(5){width:240px}
+    th,td{padding:22px 16px;border-bottom:1px solid #343b33;text-align:right;white-space:nowrap}
+    th{font-size:23px;font-weight:400;color:#9da795;padding-top:0;padding-bottom:20px}
+    th:first-child,td:first-child{text-align:left;padding-left:0}
+    td{font-size:34px;line-height:1.2;letter-spacing:-.8px}
+    td:nth-child(2){font-size:28px;color:#9da795}
+    tbody tr:first-child td{color:#d65d36}
+    tbody tr:last-child td{border-bottom:0}
+    footer{margin-top:34px;font-size:23px;line-height:1.6;color:#9da795;max-width:1120px}
+    footer span{display:block}
+  </style>
+</head>
+<body>
+  <main>
+    <header><img src="./topik.png" alt="TOPIK — Test of Proficiency in Korean"><div><h1>TOPIK Bench</h1><p>502 reading questions · 12 papers</p></div></header>
+    <table aria-label="TOPIK benchmark results; API costs cover all 502 questions">
+      <colgroup><col><col><col><col><col></colgroup>
+      <thead><tr><th scope="col">Model</th><th scope="col">Correct</th><th scope="col">Accuracy</th><th scope="col">Mean time</th><th scope="col">API cost</th></tr></thead>
+      <tbody>
+        <tr><td>Jev 1.14</td><td>487/502</td><td>97.0%</td><td>159 ms</td><td>1.31¢</td></tr>
+        <tr><td>OpenAI Decisions</td><td>477/502</td><td>95.0%</td><td>282 ms</td><td>1.85¢</td></tr>
+        <tr><td>Clef Flash 9B</td><td>464/502</td><td>92.4%</td><td>79 ms</td><td>—</td></tr>
+        <tr><td>Nimble 9B</td><td>458/502</td><td>91.2%</td><td>95 ms</td><td>—</td></tr>
+        <tr><td>Tev1 4B</td><td>428/502</td><td>85.3%</td><td>54 ms</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <footer><span>API cost: all 502 questions. Local hardware &amp; electricity excluded.</span><span>Local: RTX 5070 · Q8_0 · Clef 2K context · Others ~8K</span></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,30 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+/.aws/
+/.agents/
+/.codex/
+*.pem
+*.key
+
+# Dependencies, caches, and generated test artifacts
+node_modules/
+output/
+coverage/
+.cache/
+.playwright/
+.playwright-cli/
+*.log
+
+# Private recordings
+*.mp4
+*.webm
+*.mov
+*.mkv
+
+# OS/editor metadata
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

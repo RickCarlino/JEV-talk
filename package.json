@@ -1,0 +1,17 @@
+{
+  "name": "jev-talk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A wordless decision-model talk with a presenter console and live Jev demo.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "sync-talk": "node scripts/sync-talk.mjs",
+    "prestart": "npm run sync-talk",
+    "predev": "npm run sync-talk",
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "dev": "node --env-file-if-exists=.env --watch server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "check": "node --check server.mjs && node --check public/app.js && node --check public/deck.js && node --check public/studio.js && node --check public/live-pages.js"
+  }
+}
