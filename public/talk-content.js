@@ -115,15 +115,13 @@ export const talk = [
   {
     "title": "Conclusion",
     "notes": [
-      "It is still early.",
-      "New competitors will enter the market.",
-      "New use cases will be discovered."
+      "..."
     ]
   },
   {
     "title": "Questions?",
     "notes": [
-      "Invite questions."
+      "..."
     ]
   }
 ];
